@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Flag, PlusCircle, Lock, Copy, Check, RotateCcw } from 'lucide-react';
+import { MapPin, Flag, Copy, Check, RotateCcw } from 'lucide-react';
 import { APP_CONFIG } from '../../../data/config.js';
 
 export default function CampusHeader({
@@ -8,8 +8,6 @@ export default function CampusHeader({
   edgeCount,
   effectiveStartNode,
   onStartNodeChange,
-  isEditing,
-  onToggleEdit,
   onCopyJSON,
   copied,
   onReset
@@ -60,26 +58,8 @@ export default function CampusHeader({
         </div>
       </div>
 
-      {/* Aksi: Kelola Peta, Salin JSON, Reset */}
+      {/* Aksi: Salin JSON, Reset */}
       <div className="flex items-center gap-2 w-full md:w-auto justify-start md:justify-end flex-wrap pt-1 md:pt-0 border-t md:border-t-0 border-blue-300/10">
-        {APP_CONFIG.ALLOW_CAMPUS_EDIT ? (
-          <button
-            onClick={onToggleEdit}
-            className={`flex items-center gap-1.5 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs font-semibold cursor-pointer transition ${
-              isEditing
-                ? 'bg-amber-400 text-slate-950 font-bold shadow-md shadow-black/25'
-                : 'bg-white/10 hover:bg-white/15 text-white border border-white/20'
-            }`}
-          >
-            <PlusCircle className="w-3.5 h-3.5" />
-            <span>{isEditing ? 'Selesai Edit' : 'Kelola Peta'}</span>
-          </button>
-        ) : (
-          <span className="flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-xl bg-white/5 text-blue-200/70 text-xs border border-white/10">
-            <Lock className="w-3 h-3 text-amber-400" />
-            <span>Peta Terkunci</span>
-          </span>
-        )}
 
         <button
           onClick={onCopyJSON}

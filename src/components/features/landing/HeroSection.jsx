@@ -172,7 +172,7 @@ export default function HeroSection() {
             repeat: Infinity,
             repeatType: 'loop',
             ease: 'linear',
-            duration: 120
+            duration: 180
           }}
         >
           <SmallCloudBank />

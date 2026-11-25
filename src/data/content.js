@@ -17,7 +17,7 @@ export const APP_INFO = {
   ],
   realWorldExamples: [
     {
-      title: 'Shuttle Bus Kampus Unsri',
+      title: 'Bus DAMRI Kampus Unsri',
       desc: 'Mengantar mahasiswa dari gerbang utama mengelilingi seluruh fakultas (FK, FH, Fasilkom, dll.) dengan rute terpendek.'
     },
     {
